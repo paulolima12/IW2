@@ -8,11 +8,12 @@ function estaQuebrada(){
 }
 
 function lampadaligar(){
-    if(estaQuebrada())
+    if(!estaQuebrada())
     lampada.src = "img/ligada.jpg"
 }
 
 function lampadadesligada(){
+    if(!estaQuebrada())
     lampada.src = "img/desligada.jpg"
 
 }
