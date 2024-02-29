@@ -9,22 +9,20 @@
     <title>Calculadora</title>
 </head>
 <body>
-        <div id="main">
-            <p>Digite seu nome</p>
-            <input id="botao" name="nome" value="" type="text">
-                <div id="botoes">
-                    <button id="botao" onclick="pegaNome()">Clique</button>
-                    <button id="soma"  onclick="soma()">SOMA</button>
-                    <button id="subtrair"  onclick="subtrair()">SOMA</button>
-                    <button id="divi"  onclick="dividir()">DIVIDIR</button>
-                    <button id="mult"  onclick="multiplicar()">MULTIPLICAÇÃO</button>
-                    <button id="limpar"  onclick="limpar()">LIMPAR</button>
-                </div>
-                <p id="resultado">RESULTADO</p>
-            
-                <script src="js.executa.js"></script>
-
-
-        </div>
+    <div id="main">
+        <h1>Calculadora Espacial</h1>
+        <p>Calculadora</p>
+        <input id="input-nome" name="nome" value="" type="text">
+        <div id="botoes">
+        <button class="botao" onclick="pegaNome()">Clique</button>
+        <button class="operacao" onclick="soma()">SOMA</button>
+        <button class="operacao" onclick="subtrair()">SUBTRAÇÃO</button>
+        <button class="operacao" onclick="dividir()">DIVISÃO</button>
+        <button class="operacao" onclick="multiplicar()">MULTIPLICAÇÃO</button>
+        <button id="limpar" onclick="limpar()">LIMPAR</button>
+    </div>
+    <p id="resultado">RESULTADO</p>
+    <script src="js/executa.js"></script>
+</div>
 </body>
 </html>
