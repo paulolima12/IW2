@@ -1,12 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./estilo.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js.executa.js"></script>
     <title>Calculadora</title>
 </head>
 <body>
-    
+        <div id="main">
+            <p>Digite seu nome</p>
+            <input id="botao" name="nome" value="" type="text">
+                <div id="botoes">
+                    <button id="botao" onclick="pegaNome()">Clique</button>
+                    <button id="soma"  onclick="soma()">SOMA</button>
+                    <button id="subtrair"  onclick="subtrair()">SOMA</button>
+                    <button id="divi"  onclick="dividir()">DIVIDIR</button>
+                    <button id="mult"  onclick="multiplicar()">MULTIPLICAÇÃO</button>
+                    <button id="limpar"  onclick="limpar()">LIMPAR</button>
+                </div>
+                <p id="resultado">RESULTADO</p>
+            
+                <script src="js.executa.js"></script>
+
+
+        </div>
 </body>
 </html>

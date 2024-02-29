@@ -1,0 +1,19 @@
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10em;
+    border-radius: 2%;
+    border-style: solid;
+    border-color: antiquewhite;
+    background-color: antiquewhite;
+
+
+}
+button{
+    width: 80px;
+}
+body{
+    background-image:url(img/f4.png.jpg) ;
+}
