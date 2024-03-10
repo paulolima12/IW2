@@ -66,7 +66,14 @@ video{
     z-index: -1;
     
 }
-
+.audi {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    max-width: 300px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
   
 
   
