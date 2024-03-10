@@ -6,12 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMC</title>
     <link rel="stylesheet" href="estilo.css">
-
 </head>
 <body>
     <main>
-        <h2>Cálculo IMC</h2>
+        <section id="calculadora">
+            <form id="form" action="">
+                <h1 id="tit">Calculadora de IMC</h1>
+                <div class="box">
+                    <label for="weight">
+                        Peso em KG
+                    </label>
+                    <div class="field">
+                        <input type="number" id="weight" required>
+                        <span>
+                            Kg
+                        </span>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <label for="height">
+                        Altura
+                    </label>
+                    <div class="field">
+                        <input type="number" id="height" required>
+                        <span>
+                            m
+                        </span>
+                    </div>
+                </div>
+                <button id="calcular">Calcular IMC</button>
+            </form>
+
+            <div id="infos">
+                <div id="result">
+                    <div id="IMC">
+                        <span id="value"></span>
+                        <span> Seu IMC</span>
+                    </div>
+
+                    <div id="description">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div id="moreinf">
+                    <a href="https://youtu.be/fp60s90dKFM?si=zPHFMMhtHYv2W5Ty">ALERTA SOBRE PESOS</a>
+                </div>
+            </div>
+        </section>
     </main>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
