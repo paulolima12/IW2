@@ -1,39 +1,31 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var form = document.getElementById('form');
-    var weightInput = document.getElementById('weight');
-    var heightInput = document.getElementById('height');
-    var calcularButton = document.getElementById('calcular');
-    var valueSpan = document.getElementById('value');
-    var descriptionSpan = document.getElementById('description');
-
-    if (!form || !weightInput || !heightInput || !calcularButton || !valueSpan || !descriptionSpan) {
-        console.error('Elementos necessários não encontrados. Verifique seus IDs.');
+function calcularIMC() {
+    var weight = parseFloat(document.getElementById('weight').value);
+    var height = parseFloat(document.getElementById('height').value);
+    var gender = document.getElementById('gender').value;
+    
+    if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+        document.getElementById('resultado').innerHTML = "Por favor, insira valores válidos para peso e altura.";
         return;
     }
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
+    var imc;
+    if (gender === "male") {
+        imc = weight / (height * height);
+    } else { // female
+        imc = 1.3 * weight / (height * height);
+    }
 
-        var weight = parseFloat(weightInput.value);
-        var height = parseFloat(heightInput.value);
+    var resultado = "Seu IMC é: " + imc.toFixed(2) + "<br>";
 
-        if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
-            alert('Por favor, insira valores válidos para peso e altura.');
-            return;
-        }
+    if (imc < 18.5) {
+        resultado += "Você está abaixo do peso.";
+    } else if (imc >= 18.5 && imc < 24.9) {
+        resultado += "Você está com peso normal.";
+    } else if (imc >= 25 && imc < 29.9) {
+        resultado += "Você está com sobrepeso.";
+    } else {
+        resultado += "Você está obeso.";
+    }
 
-        var imc = weight / (height * height);
-
-        valueSpan.textContent = imc.toFixed(2);
-
-        if (imc < 18.5) {
-            descriptionSpan.textContent = 'Você está abaixo do peso.';
-        } else if (imc >= 18.5 && imc < 25) {
-            descriptionSpan.textContent = 'Você está com peso normal.';
-        } else if (imc >= 25 && imc < 30) {
-            descriptionSpan.textContent = 'Você está com sobrepeso.';
-        } else {
-            descriptionSpan.textContent = 'Você está obeso.';
-        }
-    });
-});
+    document.getElementById('resultado').innerHTML = resultado;
+}
