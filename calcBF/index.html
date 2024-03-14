@@ -2,34 +2,58 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de IMC</title>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="estilo.css">
-
+    
+    <title>Calculadora em imc</title>
 </head>
 <body>
-    <div class="tit">
-        <h1>Calculadora de IMC</h1>
+    <h1> CALCULADORA DE IMC </h1>
+    <div id="main">
+    <main>
+
+
+    <div class="genero">
+        <h2>Selecione o seu genero:</h2>
+        <div class="dados">
+                <input type="radio"  id="calculoFeminino" name="" value="">
+                <label for="mulher">MULHER</label>
+                <input type="radio"  id="genero" name="" value="">
+                <label for="homem">HOMEM</label>
+                <input type="radio"  id="genero" name="" value="">
+                <label for="outro">OUTRO</label>
+        </div>
     </div>
-    <label for="weight">Peso (kg):</label>
-    <input type="number" id="weight" required><br><br>
 
-    <label for="height">Altura (m):</label>
-    <input type="number" id="height" step="0.01" required><br><br>
 
-    <label for="gender">Sexo:</label>
-    <select id="gender">
-        <option value="male">Masculino</option>
-        <option value="female">Feminino</option>
-    </select><br><br>
+    <div class="altura">
+            <h2>Digite sua altura em cm:</h2>
+            <input id="altura" type="number">
+    </div>
 
-    <button onclick="calcularIMC()">Calcular IMC</button><br><br>
 
-    <div id="resultado"></div>
+    <div class="peso">
+            <h2>Digite seu peso:</h2>
+            <input id="peso" type="number">
+    </div>
 
-    <video src="/calcBF/movie/certo.mp4" autoplay muted></video>
-    <audio controls class="rock" src="./sound/rock.mp3" autoplay loop></audio>  
+<br>
+    <div class="estetica" >
+            <button class="botao" onclick="calcular()"> CALCULAR </button>
+    </div>
+
+    <br>
     
-</body>
+    <div class="textarena">
+        <textarea id="texto" cols="21" rows="3"></textarea>
+    </div>
 
+    
+    </main>
+</div>
+    <script src="script.js"></script>
+    <video src="movie/certo.mp4" autoplay loop muted></video>
+    <audio controls class="audi" src="sound/rock.mp3" autoplay loop></audio>
+</body>
+</html>

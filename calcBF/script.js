@@ -1,31 +1,29 @@
-function calcularIMC() {
-    var weight = parseFloat(document.getElementById('weight').value);
-    var height = parseFloat(document.getElementById('height').value);
-    var gender = document.getElementById('gender').value;
-    
-    if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
-        document.getElementById('resultado').innerHTML = "Por favor, insira valores válidos para peso e altura.";
-        return;
+function calcular(){
+    var altura=document.getElementById("altura").value / 100;
+    var peso=document.getElementById("peso").value;
+
+    var imc = peso / altura **2;
+    var texto=""
+   
+    if (imc<18.5){
+         texto="magreza"
     }
-
-    var imc;
-    if (gender === "male") {
-        imc = weight / (height * height);
-    } else { 
-        imc = 1.3 * weight / (height * height);
+    else if(imc<24.9){
+         texto="Ideal"
     }
-
-    var resultado = "Seu IMC é: " + imc.toFixed(2) + "<br>";
-
-    if (imc < 18.5) {
-        resultado += "Você está abaixo do peso.";
-    } else if (imc >= 18.5 && imc < 24.9) {
-        resultado += "Você está com peso normal.";
-    } else if (imc >= 25 && imc < 29.9) {
-        resultado += "Você está com sobrepeso.";
-    } else {
-        resultado += "Você está obeso.";
+    else if(imc<29.9){
+         texto="sobrepeso" 
     }
+    else if(imc<34.9){
+         texto="obesidade grau I" 
+    }
+    else if(imc<39.9){
+         texto="obesidade grau II"
+    }
+    else if(imc>40){
+     texto="obesidade grau III"
+}
 
-    document.getElementById('resultado').innerHTML = resultado;
+
+document.getElementById("texto").innerHTML=texto
 }
