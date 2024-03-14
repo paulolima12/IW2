@@ -11,7 +11,7 @@ function calcularIMC() {
     var imc;
     if (gender === "male") {
         imc = weight / (height * height);
-    } else { // female
+    } else { 
         imc = 1.3 * weight / (height * height);
     }
 
