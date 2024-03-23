@@ -1,0 +1,25 @@
+.btn {
+    padding: 40px 60px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding-left: 12%;
+    padding-right: 12%;
+    margin-left: 2%;
+    margin-right: 2%;
+
+}
+p {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    color: #333;
+}
+
+    
+   
