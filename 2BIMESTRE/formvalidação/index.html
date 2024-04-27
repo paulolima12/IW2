@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>FORM VALIDAÇÃO</title>		
+		<title>JQuery Validação</title>		
 		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -44,10 +44,22 @@
 						},
 						instagram: {
 							arrobaNoInicio: true
-						}
+						},
+						cpf: {
+							maxlength: 14,
+							minlength: 11,
+						},
+						cep: {
+							maxlength: 9,
+							minlength: 8,
+						},
+						rg: {
+							maxlength: 9,
+							minlength: 9,
+						},
 					},
 					submitHandler: function(form){
-						alert("Sucessoooooooooo")						
+						alert("Validação feita")						
 					}
 				})
 			})
@@ -55,7 +67,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<h1>Validação de formulários com JQuery Validation</h1>
+			<h1>Validação de formulários com JQuery </h1>
 			<form name="formCadastro" id="formCadastro" method="post">
 				<div class="row">
 					<label>Nome</label>
@@ -69,9 +81,11 @@
 					<label>Cidade</label>
 					<select name="cidade" id="cidade" class="form-control">
 						<option value="">----</option>
-						<option value="APARECIDA">Aparecida</option>
-						<option value="GUARATINGUETA">Guaratinguetá</option>
-						<option value="CUNHA">Cunha</option>
+						<option value="APARECIDA">PARAIBA</option>
+						<option value="GUARATINGUETA">SANTA ROSA</option>
+						<option value="CUNHA">RJ</option>
+						<option value="CUNHA">PR</option>
+						<option value="GUARATINGUETA">SANTA LUZIA</option>
 					</select>
 				</div>
 				<div class="row">
@@ -79,21 +93,24 @@
 					<input type="number" name="idade" id="idade" class="form-control" />
 				</div>
 				<div class="row">
+					<label>RG</label>
+					<input type="text" name="rg" id="rg" class="form-control" />
+				</div>
+				<div class="row">
+					<label>CEP</label>
+					<input type="text" name="cep" id="cep" class="form-control" />
+				</div>
+				<div class="row">
+					<label>CPF</label>
+					<input type="text" name="cpf" id="cpf" class="form-control" />
+				</div>
+				<div class="row">
 					<label>Instagram</label>
 					<input type="text" name="instagram" id="instagram" class="form-control" />
 				</div>
-
-
-				<div class="row">
-					<label>Peso</label>
-					<input type="number" name="idade" id="idade" class="form-control" />
-				</div>
-
 				<div class="row">
 					<input type="submit" name="enviar" id="enviar" class="btn btn-primary form-control" />
 				</div>
-
-				
 			</form>
 		</div>
 	</body>
