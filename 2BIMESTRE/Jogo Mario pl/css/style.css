@@ -5,7 +5,7 @@
 }
 
 *:not(.game-board, .clouds, .pipe, .mario, .score) {
-    background-image: url('../img/super\ mario.jpg');
+    background-image: url('../img/terra.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,7 +17,7 @@
     border-bottom: 50px solid green;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(#79b4cb, #e4eaec);
+    background: linear-gradient(#e4e6e7, #e4eaec);
 }
 
 .clouds {
@@ -51,9 +51,9 @@
     font-size: large;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: rgb(16, 0, 245);
-    color: white;
-    padding: 10px;
-    border-radius: 15px 15px;
+    color: rgb(252, 252, 252);
+    padding: 30px;
+    border-radius: 30px 30px;
 }
 
 @keyframes cloud-animation {
